@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "data/**"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/css/(.*)",
+      "destination": "/frontend/css/$1"
+    },
+    {
+      "source": "/js/(.*)",
+      "destination": "/frontend/js/$1"
+    },
+    {
+      "source": "/manifest.json",
+      "destination": "/frontend/manifest.json"
+    },
+    {
+      "source": "/sw.js",
+      "destination": "/frontend/sw.js"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/frontend/index.html"
+    }
+  ]
+}
