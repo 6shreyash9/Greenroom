@@ -1,0 +1,3 @@
+[tool.vercel]
+# Specify the Flask entrypoint for Vercel Python deployment
+entrypoint = "app.py"
